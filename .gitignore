@@ -1,7 +1,6 @@
-build/
-output/
-.vs/
-.vscode/
-*.user
-cmake-*
-.idea
+Common->PrintDev
+Binaries
+Build
+Build_x64
+Build_x32
+Assets

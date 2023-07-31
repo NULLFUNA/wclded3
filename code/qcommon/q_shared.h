@@ -30,13 +30,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #ifndef SVN_VERSION
   #define SVN_VERSION Q3_VERSION
 #endif
-#define CLIENT_WINDOW_TITLE   "Quake 3: Arena"
-#define CONSOLE_WINDOW_TITLE  "Quake 3 Console"
+#define CLIENT_WINDOW_TITLE   "Quake 3: Arena - WCLStandart"
+#define CONSOLE_WINDOW_TITLE  "Quake 3 Console - WCLStandart"
 // 1.32 released 7-10-2002
 
 //#define DEFAULT_GAME			"edawn"
 
-#define BASEGAME				"baseq3"
+#define BASEGAME				"osp"
 #define BASEDEMO				"demoq3"
 #define BASETA					"missionpack"
 #define STEAMPATH_NAME			"Quake 3 Arena"
@@ -183,7 +183,19 @@ float FloatSwap( const float *f );
 
 typedef unsigned char byte;
 
+#ifndef __cplusplus
+
 typedef enum { qfalse = 0, qtrue } qboolean;
+
+#else
+
+#define qfalse 		0
+#define qtrue 		1
+#define qboolean 	int
+
+#endif  //!__Q_SHARED__H__
+
+
 
 typedef union floatint_u
 {
